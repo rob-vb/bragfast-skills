@@ -26,9 +26,20 @@ Before asking anything, scan the conversation history for context. Look for:
 2. If only one brand exists, use it automatically — don't ask
 3. If multiple brands, ask which one
 4. If no brands, ask for colors (background, text, primary as hex)
-5. Default to `standard-browser` template unless the user specifies otherwise — don't list all templates unless asked
 
-## Step 3: Compose Slides
+## Step 3: Pick Template & Format
+
+Based on the conversation context, suggest a template and format that fits:
+
+- **Mobile app work** (React Native, Swift, Flutter, responsive design) → suggest a `*-mobile` template + portrait or square format
+- **Web app / dashboard / browser UI** → suggest a `*-browser` template + landscape format
+- **Hero/marketing content** (launch, announcement, blog) → suggest `hero` template + landscape format
+- **Social media** → suggest square format
+- If the user has custom templates, check if any match the context by name
+
+Present your suggestion with reasoning: "Since you've been building a mobile feature, I'd suggest **standard-mobile** in **portrait** — but you can pick a different one." Let the user confirm or change.
+
+## Step 4: Compose Slides
 
 From the conversation context, release notes, or user description:
 
@@ -40,9 +51,7 @@ From the conversation context, release notes, or user description:
    - Map content to object IDs from the template config (`title`, `description`, `image`)
 4. Show the slide plan and ask for approval
 
-## Step 4: Generate
-
-Default to **landscape** format unless the user asks for something else.
+## Step 5: Generate
 
 ### For Images:
 1. Call `bragfast_generate_release_images` with the composed slides
@@ -58,7 +67,7 @@ Default to **landscape** format unless the user asks for something else.
 4. Video renders take longer — check up to 6 times at 10-second intervals
 5. When complete, show the video URL
 
-## Step 5: Follow Up
+## Step 6: Follow Up
 
 After showing results:
 - Show credits used and remaining
