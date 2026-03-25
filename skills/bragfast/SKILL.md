@@ -59,7 +59,7 @@ After the user approves the slides (or adjusts them), use `AskUserQuestion` to a
 
 3. **Screenshots** (single-select):
    - Question: "Do you have screenshots or images to include on the slides?"
-   - Options: "Yes, I'll paste URLs" (wait for the user to provide image URLs, then map them to the `image` object ID on the relevant slides), "No, text only" (skip image objects)
+   - Options: "Yes, I have local files" (use `bragfast_upload_image` to upload each file, then use the returned URL as `image_url` on the relevant slides), "Yes, I'll paste URLs" (wait for the user to provide image URLs, then map them to the `image` object ID on the relevant slides), "No, text only" (skip image objects)
 
 Then proceed to Step 2 for brand/template selection with the user's choices.
 
@@ -178,4 +178,4 @@ After showing results:
 - Keep slide titles short and impactful
 - Use "browser" or "mobile" device frames for screenshots
 - Square format works best for social media, landscape for blogs/newsletters
-- If the user has been discussing a UI change, suggest they provide a screenshot URL for the image object
+- If the user has been discussing a UI change, suggest they provide a screenshot — either a local file path (uploaded via `bragfast_upload_image`) or a public URL
