@@ -1,0 +1,15 @@
+{
+  "name": "bragfast-mcp",
+  "display_name": "brag.fast MCP",
+  "description": "Generate branded release images and videos via MCP",
+  "version": "0.1.0",
+  "mcpServers": {
+    "bragfast": {
+      "command": "npx",
+      "args": ["-y", "@bragfast/mcp-server"],
+      "env": {
+        "BRAGFAST_API_KEY": ""
+      }
+    }
+  }
+}
