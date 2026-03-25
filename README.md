@@ -32,7 +32,19 @@ npx skills add rob-vb/bragfast-skills --list
 
 This automatically installs to your `.agents/skills/` directory (and symlinks into `.claude/skills/` for Claude Code compatibility).
 
-### Option 2: Clone and Copy
+### Option 2: Claude Code Plugin
+
+Install via Claude Code's built-in plugin system:
+
+```bash
+# Add the marketplace
+/plugin marketplace add rob-vb/bragfast-skills
+
+# Install all skills
+/plugin install bragfast-skills
+```
+
+### Option 3: Clone and Copy
 
 Clone the entire repo and copy the skills folder:
 
