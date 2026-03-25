@@ -53,6 +53,28 @@ From the conversation context, release notes, or user description:
 
 ## Step 5: Generate
 
+**CRITICAL: The `formats` parameter must be a JSON array, not a string.** Pass it as:
+
+```json
+{
+  "formats": [
+    {
+      "name": "landscape",
+      "slides": [
+        {
+          "objects": [
+            { "id": "title", "text": "My Title" },
+            { "id": "description", "text": "My description" }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+Do NOT pass `formats` as a JSON string like `"[{...}]"` — it must be an actual array of objects.
+
 ### For Images:
 1. Call `bragfast_generate_release_images` with the composed slides
 2. You'll get back a `cook_id`
