@@ -20,14 +20,7 @@ Get an API key at [brag.fast/dashboard/account](https://brag.fast/dashboard/acco
 Use [npx skills](https://github.com/anthropics/skills) to install skills directly:
 
 ```bash
-# Install all skills
 npx skills add rob-vb/bragfast-skills
-
-# Install specific skill
-npx skills add rob-vb/bragfast-skills --skill bragfast
-
-# List available skills
-npx skills add rob-vb/bragfast-skills --list
 ```
 
 This automatically installs to your `.agents/skills/` directory (and symlinks into `.claude/skills/` for Claude Code compatibility).
