@@ -1,4 +1,4 @@
-# bragfast-plugins
+# bragfast-skills
 
 Claude Code skills for [brag.fast](https://brag.fast) — generate branded release announcement images and videos.
 
@@ -17,10 +17,10 @@ Get an API key at [brag.fast/dashboard/account](https://brag.fast/dashboard/acco
 
 ```bash
 # Install all skills
-npx skills add rob-vb/bragfast-plugins
+npx skills add rob-vb/bragfast-skills
 
 # Install specific skill
-npx skills add rob-vb/bragfast-plugins --skill bragfast
+npx skills add rob-vb/bragfast-skills --skill bragfast
 ```
 
 ## Skills
