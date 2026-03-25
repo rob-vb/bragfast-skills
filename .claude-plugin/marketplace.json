@@ -1,7 +1,23 @@
 {
   "name": "bragfast-skills",
-  "display_name": "brag.fast",
-  "description": "Generate branded release announcement images and videos from Claude",
-  "author": "brag.fast",
-  "homepage": "https://brag.fast"
+  "owner": {
+    "name": "brag.fast",
+    "url": "https://brag.fast"
+  },
+  "metadata": {
+    "description": "Generate branded release announcement images and videos from Claude",
+    "version": "1.0.0",
+    "repository": "https://github.com/rob-vb/bragfast-skills"
+  },
+  "plugins": [
+    {
+      "name": "bragfast-skills",
+      "description": "Generate branded release images and videos using brag.fast MCP tools",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/bragfast"
+      ]
+    }
+  ]
 }
