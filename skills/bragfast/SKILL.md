@@ -44,23 +44,20 @@ Here's what I'd put on the slides based on your recent changes:
 Template: [auto-suggested based on file types]
 Brand: [auto-selected or only brand]
 
-**Output type** (pick one):
-- [ ] Images — static slides
-- [ ] Video — animated release video
-- [ ] Both
-
-**Formats** (pick one or more):
-- [ ] Landscape — best for Twitter/X, blogs, newsletters
-- [ ] Portrait — best for Instagram Stories, TikTok
-- [ ] Square — best for LinkedIn, Instagram feed
-- [ ] All three
-
-Just tell me what you want, e.g. "images in landscape and square" or "both, all formats".
-
-You can also edit slides, remove/add slides, or change the template.
+You can edit, remove, or add slides — or say "looks good" to continue.
 ```
 
-The user responds in natural language. Interpret their response and either adjust or proceed to generation.
+After the user approves the slides (or adjusts them), use `AskUserQuestion` to ask two questions:
+
+1. **Output type** (single-select):
+   - Question: "What would you like to generate?"
+   - Options: "Images" (static slides), "Video" (animated release video), "Both" (images + video)
+
+2. **Formats** (multi-select with `multiSelect: true`):
+   - Question: "Which formats do you want?"
+   - Options: "Landscape" (Twitter/X, blogs, newsletters), "Portrait" (Instagram Stories, TikTok), "Square" (LinkedIn, Instagram feed)
+
+Then proceed to Step 2 for brand/template selection with the user's choices.
 
 ---
 
